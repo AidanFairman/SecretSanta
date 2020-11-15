@@ -5,9 +5,9 @@ RUN sudo dpkg -i packages-microsoft-prod.deb
 RUN sudo apt-get update; \
   sudo apt-get install -y apt-transport-https && \
   sudo apt-get update && \
-  sudo apt-get install -y dotnet-sdk-3.1
+  sudo apt-get install -y dotnet-sdk-5.0
 
-RUN sudo apt-get install -y dotnet-runtime-3.1
+RUN sudo apt-get install -y dotnet-runtime-5.0
 
 RUN npm install -g @angular/cli
 # Install custom tools, runtimes, etc.
