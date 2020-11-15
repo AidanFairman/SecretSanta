@@ -1,4 +1,4 @@
-using SecretSanta.Services.Profiles;
+using SecretSanta.Profiles.Data;
 using SecretSanta.Profiles.Dto;
 
 namespace SecretSanta.Mappers{

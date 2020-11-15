@@ -1,8 +1,8 @@
-
+using SecretSanta.Wishes.Data;
 
 using System.Collections.Generic;
 
-namespace SecretSanta.Services.Wishes
+namespace SecretSanta.Wishes
 {
     public class WishService : IWishService
     {

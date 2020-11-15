@@ -1,6 +1,6 @@
 
 
-namespace SecretSanta.Services.Members
+namespace SecretSanta.Members.Data
 {
     public class Password
     {

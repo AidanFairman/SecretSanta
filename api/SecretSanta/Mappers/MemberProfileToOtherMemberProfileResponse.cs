@@ -1,5 +1,5 @@
 using SecretSanta.Profiles.Dto;
-using SecretSanta.Services.Profiles;
+using SecretSanta.Profiles.Data;
 
 namespace SecretSanta.Mappers{
     public class MemberProfileToOtherMemberProfileResponse : IMapper<MemberProfile, OtherMemberProfileResponse>

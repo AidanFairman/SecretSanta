@@ -1,6 +1,6 @@
-using SecretSanta.Services.Members;
+using SecretSanta.Members.Data;
 
-namespace SecretSanta.Services.Games
+namespace SecretSanta.Games.Data
 {
     public class Santa
     {

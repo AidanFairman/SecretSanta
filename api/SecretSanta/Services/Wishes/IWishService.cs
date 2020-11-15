@@ -1,6 +1,7 @@
 using System.Collections.Generic;
+using SecretSanta.Wishes.Data;
 
-namespace SecretSanta.Services.Wishes
+namespace SecretSanta.Wishes
 {
     public interface IWishService
     {

@@ -3,14 +3,15 @@ using System.Web;
 using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using SecretSanta.Services.Profiles;
+using SecretSanta.Controllers;
+using SecretSanta.Profiles;
+using SecretSanta.Profiles.Data;
+using SecretSanta.Profiles.Dto;
 using SecretSanta.Mappers;
 
-namespace SecretSanta.Profiles.Dto
+namespace SecretSanta.Profiles
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class ProfileController : ControllerBase
+    public class ProfileController : BaseController
     {
         private readonly IProfileService profileService;
         private readonly MappingService mapper;
@@ -22,17 +23,23 @@ namespace SecretSanta.Profiles.Dto
         }
 
         [HttpGet]
-        public MemberProfileResponse get()
+        public MemberProfileResponse GetMyProfile()
         {
             string email = User.Identity.Name;
             MemberProfile profile = profileService.GetMemberProfile(email);
             return mapper.map<MemberProfile, MemberProfileResponse>(profile);
         }
 
-        [HttpGet("{id:int}")]
-        public MemberProfileResponse get(int id)
+        [HttpGet("id/{memberid:int}/game/{gameId}")]
+        public MemberProfileResponse GetMemberProfileForGame(int memberId, int gameId)
         {
-            return null;
+
+        }
+
+        [HttpPut]
+        public MemberProfileResponse UpdateMemberProfile([FromBody] MemberUpdateRequest updateRequest)
+        {
+
         }
     }
 }

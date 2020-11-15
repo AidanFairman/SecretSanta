@@ -1,6 +1,6 @@
 
 
-namespace SecretSanta.Services.Games
+namespace SecretSanta.Games
 {
     public class GameService : IGameService
     {

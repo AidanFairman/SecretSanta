@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using SecretSanta.Services.Wishes;
+using SecretSanta.Wishes.Data;
 
-namespace SecretSanta.Services.Profiles
+namespace SecretSanta.Profiles.Data
 {
     public class MemberProfile
     {

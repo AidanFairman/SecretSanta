@@ -1,4 +1,6 @@
-namespace SecretSanta.Services.Profiles
+using SecretSanta.Profiles.Data;
+
+namespace SecretSanta.Profiles
 {
     public interface IProfileService
     {

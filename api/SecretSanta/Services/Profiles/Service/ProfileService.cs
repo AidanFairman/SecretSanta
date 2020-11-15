@@ -1,9 +1,12 @@
 using System;
 using System.Collections.Generic;
-using SecretSanta.Services.Members;
-using SecretSanta.Services.Wishes;
+using SecretSanta.Members;
+using SecretSanta.Members.Data;
+using SecretSanta.Wishes;
+using SecretSanta.Wishes.Data;
+using SecretSanta.Profiles.Data;
 
-namespace SecretSanta.Services.Profiles
+namespace SecretSanta.Profiles
 {
     public class ProfileService : IProfileService
     {

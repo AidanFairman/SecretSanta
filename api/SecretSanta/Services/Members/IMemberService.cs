@@ -1,6 +1,6 @@
+using SecretSanta.Members.Data;
 
-
-namespace SecretSanta.Services.Members
+namespace SecretSanta.Members
 {
     public interface IMemberService
     {
