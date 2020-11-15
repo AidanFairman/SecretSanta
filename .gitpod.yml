@@ -3,3 +3,7 @@ image:
 tasks:
   - init: 'echo "TODO: Replace with init/build command"'
     command: 'echo "TODO: Replace with command to start project"'
+vscode:
+  extensions:
+    - jsw.csharpextensions@1.3.6:hLCmZ4eAX9pbCaxe9T4hsQ==
+    - muhammad-sammy.csharp@1.23.5:P2IAAqkG33Qk7a8Z/Ip6eg==

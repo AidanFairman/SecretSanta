@@ -2,7 +2,7 @@ using System;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace QuickStart.Controllers
+namespace SecretSanta.Controllers
 {
 	[ApiController]
 	[Route("")]
