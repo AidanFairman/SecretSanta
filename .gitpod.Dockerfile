@@ -8,6 +8,8 @@ RUN sudo apt-get update; \
   sudo apt-get install -y dotnet-sdk-3.1
 
 RUN sudo apt-get install -y dotnet-runtime-3.1
+
+RUN sudo npm install -g @angular/cli
 # Install custom tools, runtimes, etc.
 # For example "bastet", a command-line tetris clone:
 # RUN brew install bastet
