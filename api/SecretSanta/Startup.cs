@@ -2,6 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using SecretSanta.Mappers;
+using SecretSanta.Services.Games;
+using SecretSanta.Services.Members;
+using SecretSanta.Services.Profiles;
+using SecretSanta.Services.Wishes;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -25,6 +30,23 @@ namespace SecretSanta
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton<IServiceProvider>(sp => sp);
+            System.Reflection.Assembly.GetExecutingAssembly()
+            .GetTypes()
+            .Where(item => !item.IsAbstract && !item.IsInterface)
+            .ToList()
+            .ForEach(assignedTypes =>
+            {
+                if (assignedTypes.GetInterfaces().Length > 0)
+                {
+                    assignedTypes.GetInterfaces().ToList().ForEach(type => services.AddSingleton(type, assignedTypes));
+                }
+                else
+                {
+                    services.AddScoped(assignedTypes);
+                }
+            });
+
             services.AddControllers();
         }
 
